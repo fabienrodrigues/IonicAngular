@@ -1,0 +1,25 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>{{ artist.name }}</ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openSearch()">
+                <ion-icon name="search" color="secondary"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines>
+        <ion-item *ngFor="let item of albums">
+            <button ion-item (click)="openAlbum(item)">
+                <ion-thumbnail item-start>
+                    <img [src]="item.thumb" />
+                </ion-thumbnail>
+                
+                <div class="albumName">{{item.name}}</div>
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

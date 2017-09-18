@@ -1,0 +1,31 @@
+
+.header{
+	text-align: center;
+	
+	/*&:after{
+		display: none;		
+	}*/
+
+	.toolbar{
+		padding: $paddingGlobal;
+		min-height: initial;
+		text-align: center;
+
+		.toolbar-background{
+			background: none;
+			border: none;
+		}
+
+		.toolbar-title{
+			@include fontLt;
+			font-size: 	$fontM;
+			color: $text-color;
+		}
+	}
+}
+
+
+/* 
+.toolbar-background-md{
+	
+} */

@@ -1,0 +1,123 @@
+page-album-detail {
+    // --- HEADER ---
+    .header{
+        .toolbar{
+            &.toolbar-ios ion-title{
+                position: static;
+            }
+
+            .toolbar-content{
+                position: absolute;
+                top: 26px;
+                left: 64px;
+                right: 64px;
+            }
+
+            .albumName{
+                .toolbar-title{
+                    display: block;
+                    text-transform: uppercase;
+                    @include font;
+                    font-size: $fontM;
+                    line-height: $fontM;
+                    letter-spacing: 0.13em;
+                }
+            }
+
+            .artistName{
+                .toolbar-title{
+                    display: block;
+                    margin-top: 5px;
+                    @include font;
+                    font-size: $fontS;
+                    color: color($colors, light);
+
+                    .button{
+                        height: auto;
+                        padding: 0;
+                        color: color($colors, light);
+                        font-size: inherit;
+                        line-height: inherit;
+                        letter-spacing: inherit;
+                    }
+                }
+            }
+        }
+    }    
+
+    
+    // --- CONTENT ---
+    .content .scroll-content{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0!important;
+
+        .item-profile {
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+            height: 24.2%;
+            opacity: 0.15;
+        }
+
+        .list{
+            padding: 0 $paddingGlobal;
+
+            .item{
+                .label{
+                    margin: 0;
+
+                    .musicItem{
+                        padding: 20px 0;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid rgba(color($colors, primary),0.4);
+            
+                        .musicText{
+                            width: 80%;
+            
+                            .musicName{
+                                font-size: $fontS;
+                                color: $text-color;
+                            }
+            
+                            .artistName{
+                                margin-top: 5px;
+                                font-size: $fontXS;
+                                color: rgba($text-color, 0.5);
+                            }
+                        }
+                        
+                        .button{
+                            width: 20%;
+                            text-align: right;
+                            box-shadow: none;
+                            border-radius: 0;
+
+                            .button-inner{
+                                justify-content: flex-end;
+                            }
+        
+                            ion-icon{
+                                padding: 0;
+                                font-size: 2.4em;
+                                line-height: 1em;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child{
+                    .musicItem{
+                        border: none;                            
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+}

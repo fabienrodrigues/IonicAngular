@@ -1,0 +1,66 @@
+artists {
+	margin: 0;
+	@include clearfix;
+
+	.item.item-block{
+		position: relative;
+		margin-bottom: 26px;
+		padding: 0;
+
+		.item-inner{
+			background: none;
+			@include reset;
+
+			.input-wrapper{
+				.label{
+					margin: 0;
+
+					.item.item-block{
+						width: 100%;
+						margin: 0;
+						padding: 0;
+
+						&.activated{
+							background: none;
+						}
+
+						ion-thumbnail{
+							position: relative;
+							width: 20%;
+							height: 0;
+							margin: 0;
+							padding-top: 20%;
+							border-radius: 100%;
+							overflow: hidden;
+
+							img{
+								display: block;
+								width: 100%;
+								height: auto;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%) scale(1.2);
+							}
+
+							& ~ .item-inner{
+								padding-left: $paddingGlobal;
+							}
+						}
+
+						.label{
+							.artistName{
+								font-size: $fontS;
+								color: $text-color;
+							}
+
+							.button-effect{
+								display: none;
+							}
+						}
+					}
+				}
+			}	
+		}
+	}	
+}

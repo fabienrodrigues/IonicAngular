@@ -1,0 +1,55 @@
+
+page-login {
+	text-align: center;
+	position: relative;
+
+	&:after{
+		content: '';
+		background: #211f3d;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 5;
+		opacity: 0.87;
+	}
+
+	img{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		max-width: initial;
+		height: 100%;
+		transform: translate(-50%, -50%);
+	}
+
+	.content{
+		background: none;
+		z-index: 10;
+
+	}
+
+	.loginPageForm{
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+		z-index: 20;
+	}
+
+	.button{
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.message{
+		display: block;
+		//font-size: $fontS;
+		color: rgba($text-color, 0.5);
+	}
+
+	.linkRegister{
+		color: $text-color;
+	}
+}

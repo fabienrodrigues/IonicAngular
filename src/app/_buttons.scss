@@ -1,0 +1,53 @@
+@import "./_mixins";
+@import "./_texts";
+
+.button-ios,
+.button-md{
+	background: none;
+	display: inline-block;
+	padding: 10px;
+	border: none;
+}
+
+
+.button-ios-primary,
+.button-md-primary{
+	@include gradient;
+	display: block;
+	width: 100%;
+	padding: 27px;
+	@include font;
+	font-size: $fontM;
+	line-height: $fontM;
+	text-transform: none;
+	color: $text-color;
+	//border-radius: 40px;
+	box-shadow: none;
+}
+
+.bar-buttons{
+	margin: 0;
+
+	.bar-button{
+		margin: inherit;
+	}
+}
+
+.back-button{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+
+	.button-inner{
+		justify-content: left;
+	}
+
+	.back-button-icon.icon {
+		padding: 0;
+	    color: $text-color;
+	}
+
+	.back-button-text{
+		display: none;
+	}
+}

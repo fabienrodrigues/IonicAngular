@@ -1,0 +1,85 @@
+// --- TYPOS ---
+// -------------
+	$fontXXS: 12px;
+	$fontXS	: $font-size-base;
+	$fontS	: 16px;
+	$fontM	: 21px;
+	$fontL	: 30px;
+	$fontXL	: 58px;
+
+
+	h1{
+		position: relative;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		@include fontBd;
+		font-size: $fontXL;
+		line-height: 50px;
+		text-transform: uppercase;
+	}
+
+	h2{
+		position: relative;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		@include fontBd;
+		font-size: $fontL;
+		line-height: $fontL;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	h3{
+		margin-bottom: 5px;
+		@include fontBd;
+		font-size: $fontS;
+		line-height: $fontS;
+		text-transform: uppercase;
+	}
+
+	h4{
+		text-transform: uppercase;
+		@include fontBd;
+		font-size: $fontM;
+		line-height: $fontM;
+		color: $text-color;
+	}
+
+	h5{
+		@include font;
+		font-size: $fontXS;
+		line-height: $fontM;
+
+		strong{
+			@include fontBd;
+		}
+	}
+
+	p{
+		color: $text-color;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+
+	.small{
+		font-size: $fontXS;
+		line-height: $fontXS + 2;
+	}
+
+	.extra_small{
+		font-size: $fontXXS;
+		line-height: $fontXXS + 2;
+	}	
+
+// --- /TYPOS ---
+
+
+// SURLIGNEMENT DES TEXTES
+/* ::-moz-selection{background: $black; color: $white;}
+::-moz-selection{background: $black; color: $white;}
+::-webkit-selection{background: $black; color: $white;}
+::selection{background: $black; color: $white;} */
+

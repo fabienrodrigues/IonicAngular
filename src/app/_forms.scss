@@ -1,0 +1,26 @@
+.item-block{
+	background: none;
+	padding: 0;
+
+	.item-inner{
+		color: color($colors, light);
+		border-bottom: 1px solid rgba(color($colors, light), 0.7);
+	}
+
+	&.item-md{
+		
+		&.item-input.item-input-has-focus .item-inner,
+		&.item-input.input-has-focus .item-inner,
+		& .item-inner{
+			color: color($colors, light);
+			border-bottom: 1px solid rgba(color($colors, light), 0.7);
+			box-shadow: none;
+		}
+
+		&.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+		&.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+			border-width: 1px;
+			box-shadow: none;
+		}
+	}
+}

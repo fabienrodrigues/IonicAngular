@@ -1,0 +1,31 @@
+<ion-header no-border>
+	<ion-navbar>
+		<ion-title class="albumName">{{ album.name }}</ion-title>
+
+		<ion-title class="artistName">
+			<button (click)="openAlbums()" ion-button clear>{{ artist.name }}</button>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="item-profile" text-center #profilePic [style.background-image]="'url(' + artist.profilePic + ')'"></div>
+
+	<ion-list no-lines>
+        <ion-item *ngFor="let item of tracks">
+			<div class="musicItem">
+				<div class="musicText">
+					<div class="musicName">{{ item.title }}</div>
+					<div class="artistName">{{ artist.name }}</div>
+				</div>
+
+				<button ion-button end icon-only (click)="playTrack(item)">
+					<ion-icon name="play" color="secondary"></ion-icon>
+				</button>
+			</div>
+        </ion-item>
+    </ion-list>
+
+	
+</ion-content>
