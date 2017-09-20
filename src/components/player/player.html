@@ -1,0 +1,13 @@
+
+<div class="playerFooter" *ngIf="playerService.isInit == true">
+	<div class="albumThumb"><img [src]="player.album.thumb" /></div>
+	<div class="albumText">
+		<div class="currentMusic">{{ player.currentTrack.title }}</div>
+		<div class="artistName">{{ player.artist.name }}</div>
+		<div class="albumName">{{ player.album.name }}</div>
+	</div>
+
+	<button ion-button end icon-only (click)="togglePlay(player.currentTrack)">
+		<ion-icon name="play" color="secondary"></ion-icon>
+	</button>
+</div>

@@ -9,6 +9,8 @@
 
 .content{
 	color: $text-color;
+	height: auto;
+	bottom: 0;
 	
 	&.content-ios{
 		padding: $paddingGlobal;

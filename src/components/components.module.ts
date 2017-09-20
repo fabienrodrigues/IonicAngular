@@ -1,8 +1,13 @@
-import { NgModule } from '@angular/core';
-import { PlayerAudioComponent } from './player-audio/player-audio';
+import { NgModule} from '@angular/core';
+import { IonicModule } from 'ionic-angular';
+import { PlayerComponent } from './player/player';
+
 @NgModule({
-	declarations: [PlayerAudioComponent],
-	imports: [],
-	exports: [PlayerAudioComponent]
+	declarations: [PlayerComponent],
+	imports: [
+		IonicModule
+	],
+	exports: [PlayerComponent]
 })
+
 export class ComponentsModule {}

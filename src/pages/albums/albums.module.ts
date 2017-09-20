@@ -3,14 +3,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { AlbumsPage } from './albums';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
-    AlbumsPage,
+    AlbumsPage
   ],
   imports: [
     IonicPageModule.forChild(AlbumsPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    ComponentsModule
   ],
   exports: [
     AlbumsPage

@@ -2,7 +2,7 @@ import { Album } from './album';
 
 export class Artist {
 	name: string;
-	picture: string;
+	profilePic: string;
 	about: string;
 	albums: Album[];
 

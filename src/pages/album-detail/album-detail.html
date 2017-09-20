@@ -5,13 +5,15 @@
 		<ion-title class="artistName">
 			<button (click)="openAlbums()" ion-button clear>{{ artist.name }}</button>
 		</ion-title>
+
+		<div class="item-profile"><img [src]="artist.profilePic" alt=""></div>
 	</ion-navbar>
+
+	<div class="album-thumb" text-center #profilePic [style.background-image]="'url(' + album.thumb + ')'"></div>
 </ion-header>
 
 
 <ion-content>
-	<div class="item-profile" text-center #profilePic [style.background-image]="'url(' + artist.profilePic + ')'"></div>
-
 	<ion-list no-lines>
         <ion-item *ngFor="let item of tracks">
 			<div class="musicItem">
@@ -27,5 +29,5 @@
         </ion-item>
     </ion-list>
 
-	
+	<player></player>
 </ion-content>

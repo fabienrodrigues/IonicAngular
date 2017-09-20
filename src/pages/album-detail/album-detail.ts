@@ -4,6 +4,7 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 import { Artist } from '../../models/artist';
 import { Album } from '../../models/album';
 import { Track } from '../../models/track';
+import { PlayerService } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -16,7 +17,7 @@ export class AlbumDetailPage {
 	album: Album;
 	tracks: Track[];
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public playerService: PlayerService) {
 		this.album = this.navParams.get('album');
 		this.artist = this.navParams.get('artist');
 
@@ -27,9 +28,14 @@ export class AlbumDetailPage {
 
 
 	/**
-    * Navigate to the detail page for this item.
+    * Navigate to artist's albums.
     */
     openAlbums() {
         this.navCtrl.push('AlbumsPage', {artist: this.artist});
-    }
+	}
+	
+	playTrack(item) {
+									// isInit = true, isPlaying = false, datas									
+		this.playerService.setPlayer(true, false, item);
+	}
 }

@@ -10,7 +10,6 @@
 export class Track {
 	id: string;
 	title: string;
-	title_short: string;
 	duration: number;
 
 	constructor(fields: any) {

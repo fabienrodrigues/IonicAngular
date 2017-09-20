@@ -1,7 +1,14 @@
 page-album-detail {
     // --- HEADER ---
     .header{
+        height: 20%;
+
         .toolbar{
+            overflow: visible;
+            contain: none;
+            position: relative;
+            z-index: 10;
+
             &.toolbar-ios ion-title{
                 position: static;
             }
@@ -14,6 +21,8 @@ page-album-detail {
             }
 
             .albumName{
+                padding: 0;
+
                 .toolbar-title{
                     display: block;
                     text-transform: uppercase;
@@ -25,6 +34,8 @@ page-album-detail {
             }
 
             .artistName{
+                padding: 0;
+
                 .toolbar-title{
                     display: block;
                     margin-top: 5px;
@@ -42,76 +53,94 @@ page-album-detail {
                     }
                 }
             }
+
+            .item-profile{
+                margin-top: 10px;
+                @include avatar(64px);
+
+                img{
+                    max-width: initial;
+                }
+            }
+        }
+
+        .album-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background-position: center center;
+            background-size: 100% auto;
+            opacity: 0.3;
         }
     }    
 
     
     // --- CONTENT ---
-    .content .scroll-content{
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin-top: 0!important;
+    .content{
+        background: #1f1e23;
+        top: 20%;
 
-        .item-profile {
-            width: 100%;
-            background-position: center center;
-            background-size: cover;
-            height: 24.2%;
-            opacity: 0.15;
-        }
+        .scroll-content{
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: 0!important;
 
-        .list{
-            padding: 0 $paddingGlobal;
+            .list{
+                padding: 0 $paddingGlobal;
 
-            .item{
-                .label{
-                    margin: 0;
+                .item{
+                    .label{
+                        margin: 0;
 
-                    .musicItem{
-                        padding: 20px 0;
-                        display: flex;
-                        align-items: center;
-                        border-bottom: 1px solid rgba(color($colors, primary),0.4);
-            
-                        .musicText{
-                            width: 80%;
-            
-                            .musicName{
-                                font-size: $fontS;
-                                color: $text-color;
+                        .musicItem{
+                            padding: 20px 0;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px solid rgba(color($colors, primary),0.4);
+                
+                            .musicText{
+                                width: 80%;
+                
+                                .musicName{
+                                    font-size: $fontS;
+                                    color: $text-color;
+                                }
+                
+                                .artistName{
+                                    margin-top: 5px;
+                                    font-size: $fontXS;
+                                    color: rgba($text-color, 0.5);
+                                }
                             }
-            
-                            .artistName{
-                                margin-top: 5px;
-                                font-size: $fontXS;
-                                color: rgba($text-color, 0.5);
-                            }
-                        }
-                        
-                        .button{
-                            width: 20%;
-                            text-align: right;
-                            box-shadow: none;
-                            border-radius: 0;
+                            
+                            .button{
+                                width: 20%;
+                                text-align: right;
+                                box-shadow: none;
+                                border-radius: 0;
 
-                            .button-inner{
-                                justify-content: flex-end;
-                            }
-        
-                            ion-icon{
-                                padding: 0;
-                                font-size: 2.4em;
-                                line-height: 1em;
+                                .button-inner{
+                                    justify-content: flex-end;
+                                }
+            
+                                ion-icon{
+                                    padding: 0;
+                                    font-size: 2.4em;
+                                    line-height: 1em;
+                                }
                             }
                         }
                     }
-                }
 
-                &:last-child{
-                    .musicItem{
-                        border: none;                            
+                    &:last-child{
+                        .musicItem{
+                            border: none;                            
+                        }
                     }
                 }
             }

@@ -21,7 +21,8 @@
 	vertical-align: middle;
 	width: $size;
 	height: $size;
-	position: relative;
+    position: relative;
+    z-index: 1;
 	overflow: hidden;
 	border-radius: 100%;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
@@ -31,7 +32,8 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: $size + 10;
+        width: $size + 10;
+        height: auto;
 		transform: translate(-50%, -50%);
 	}
 }
